@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/webservicejghz" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/webservicejghz" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Cliente">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Respuesta">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Apellido_Materno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Apellido_Paterno" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Cliente" nillable="true" type="tns:Cliente" />
+  <xs:complexType name="Respuesta">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Respuesta" nillable="true" type="tns:Respuesta" />
+  <xs:complexType name="Alumno">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Res">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Carrera" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Num_Control" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Alumno" nillable="true" type="tns:Alumno" />
+  <xs:complexType name="Res">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Res" nillable="true" type="tns:Res" />
+  <xs:complexType name="Producto">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:REST">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Clasificación" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="inventario" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Producto" nillable="true" type="tns:Producto" />
+  <xs:complexType name="REST">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="REST" nillable="true" type="tns:REST" />
+</xs:schema>
